@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="454.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControllerShow">
+   <children>
+      <TabPane prefHeight="407.0" prefWidth="519.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Курсы">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="411.0" prefWidth="519.0">
+                     <children>
+                        <TableView fx:id="tableCourses" prefHeight="424.0" prefWidth="527.0">
+                          <columns>
+                            <TableColumn fx:id="tableCoursesId" prefWidth="75.0" text="id" />
+                            <TableColumn fx:id="tableCoursesTitle" prefWidth="123.0" text="title" />
+                              <TableColumn fx:id="tableCoursesLenght" prefWidth="64.0" text="lenght" />
+                              <TableColumn fx:id="tableCoursesDescription" prefWidth="343.0" text="description" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Уроки">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableLessons" layoutX="-2.0" prefHeight="380.0" prefWidth="612.0">
+                          <columns>
+                            <TableColumn fx:id="tableLessonsId" prefWidth="75.0" text="id" />
+                            <TableColumn fx:id="tableLessonsTeachers" prefWidth="144.0" text="teachers" />
+                              <TableColumn fx:id="tableLessonsCourse" minWidth="6.0" prefWidth="68.0" text="course" />
+                              <TableColumn fx:id="tableLessonsRoom" minWidth="0.0" prefWidth="96.0" text="room" />
+                              <TableColumn fx:id="tableLessonsData" prefWidth="224.0" text="lesson_data" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Учителя">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableteachers" layoutY="-1.0" prefHeight="383.0" prefWidth="606.0">
+                          <columns>
+                            <TableColumn fx:id="tableteachersId" prefWidth="75.0" text="id" />
+                            <TableColumn fx:id="tableteachersName" prefWidth="176.0" text="name" />
+                              <TableColumn fx:id="tableteachersAddress" prefWidth="194.0" text="address" />
+                              <TableColumn fx:id="tableteachersPhone" minWidth="0.0" prefWidth="160.0" text="phohe" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Пользователи">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableusers" prefHeight="378.0" prefWidth="606.0">
+                          <columns>
+                            <TableColumn fx:id="tableusersId" prefWidth="75.0" text="id" />
+                            <TableColumn fx:id="tableusersFirstName" prefWidth="75.0" text="firstName" />
+                              <TableColumn fx:id="tableusersLastname" prefWidth="108.0" text="lastName" />
+                              <TableColumn fx:id="tableusersEmail" prefWidth="151.0" text="email" />
+                              <TableColumn fx:id="tableusersLogin" prefWidth="106.0" text="login" />
+                              <TableColumn fx:id="tableusersPassword" prefWidth="89.0" text="password" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Pane layoutX="520.0" prefHeight="454.0" prefWidth="284.0">
+         <children>
+            <Label layoutX="14.0" layoutY="29.0" text="id" />
+            <Label layoutX="10.0" layoutY="64.0" prefHeight="17.0" prefWidth="63.0" text="FirstName" />
+            <Label layoutX="8.0" layoutY="94.0" prefHeight="17.0" prefWidth="74.0" text="LastName" translateY="20.0" />
+            <Label layoutX="10.0" layoutY="121.0" prefHeight="17.0" prefWidth="74.0" text="email" translateY="30.0" />
+            <Label layoutX="10.0" layoutY="149.0" prefHeight="17.0" prefWidth="74.0" text="login" translateY="40.0" />
+            <Label layoutX="10.0" layoutY="179.0" prefHeight="17.0" prefWidth="74.0" text="Password" translateY="50.0" />
+            <TextField fx:id="txtid" layoutX="96.0" layoutY="25.0" />
+            <TextField fx:id="txtName" layoutX="96.0" layoutY="60.0" />
+            <TextField fx:id="txtFname" layoutX="96.0" layoutY="109.0" />
+            <TextField fx:id="txtemail" layoutX="96.0" layoutY="147.0" />
+            <TextField fx:id="txtlogin" layoutX="96.0" layoutY="185.0" />
+            <PasswordField fx:id="txtpassword" layoutX="96.0" layoutY="225.0" />
+            <Button layoutX="108.0" layoutY="316.0" mnemonicParsing="false" onAction="#pressUpdate" prefHeight="37.0" prefWidth="74.0" text="Update" />
+            <Button layoutX="10.0" layoutY="316.0" mnemonicParsing="false" onAction="#pressAdd" prefHeight="37.0" prefWidth="74.0" text="Add" />
+            <Button layoutX="211.0" layoutY="318.0" mnemonicParsing="false" onAction="#pressDelete" prefHeight="37.0" prefWidth="63.0" text="Delete" />
+            <Label fx:id="lblInfo" layoutX="28.0" layoutY="393.0" prefHeight="25.0" prefWidth="236.0" text="Status:" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
